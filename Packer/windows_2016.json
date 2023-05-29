@@ -1,7 +1,7 @@
 {
   "builders": [
     {
-      "vm_name": "WindowsServer2016",
+      "vm_name": "WindowsServer2019",
       "type": "vmware-iso",
       "communicator": "winrm",
       "iso_url": "{{user `iso_url`}}",
@@ -13,7 +13,7 @@
       "winrm_timeout": "4h",
       "shutdown_timeout": "2h",
       "shutdown_command": "a:/sysprep.bat",
-      "guest_os_type": "windows8srv-64",
+      "guest_os_type": "windows2019srv-64",
       "disk_size": 61440,
       "vnc_port_min": 5900,
       "vnc_port_max": 5980,
@@ -179,8 +179,8 @@
     }
   ],
   "variables": {
-    "iso_url": "https://software-download.microsoft.com/download/pr/Windows_Server_2016_Datacenter_EVAL_en-us_14393_refresh.ISO",
-    "iso_checksum": "md5:70721288BBCDFE3239D8F8C0FAE55F1F",
+    "iso_url": "https://software-static.download.prss.microsoft.com/dbazure/988969d5-f34g-4e03-ac9d-1f9786c66749/17763.3650.221105-1748.rs5_release_svc_refresh_SERVER_EVAL_x64FRE_en-us.iso",
+    "iso_checksum": "md5:C2592569DF937AFF1C21DAFD3D4E9B40",
     "disk_size": "61440",
     "autounattend": "./answer_files/2016/Autounattend.xml",
     "virtio_win_iso": "./virtio-win.iso",
